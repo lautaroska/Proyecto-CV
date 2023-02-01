@@ -1,0 +1,35 @@
+body{
+    background-color: #F2F3F4;
+}
+
+h1{
+    font-family: 'Mulish', sans-serif;
+    font-size: xx-large;
+    font-weight: 900, bold;    
+}
+
+h2{
+    font-family: 'Kanit', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    padding: 3%;
+}
+
+* #datospersonales{
+    background-color: #FF5733;
+    padding-inline:3% 5%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    color: beige;
+}
+
+* #creador{
+    color: grey;
+    text-align: center;
+    padding: 3%;
+}
