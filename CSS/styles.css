@@ -385,5 +385,10 @@ footer {
   .div-data-personal p {
     font-size: medium;
   }
+  
+  footer {
+    font-size: small;
+    height: fit-content;
+  }
 }
 
