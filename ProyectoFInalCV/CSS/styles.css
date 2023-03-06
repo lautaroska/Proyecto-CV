@@ -7,6 +7,11 @@ body {
   background-color: #ddd;
 }
 
+.link-sin-decoracion {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* BARRA DE NAVEGACIÓN */
 
 .barra-de-menu {
@@ -14,32 +19,6 @@ body {
   background-color: #907080;
   height: 55px;
   position: sticky;
-    top:0;
-}
-
-#menu-btn {
-  display: none;
-}
-
-.menu-hamburguesa {
-  display: none;
-  height: 50px;
-  justify-content: left;
-  align-items: center;
-}
-
-.boton-menu { /*icono hamburguesa del menu*/
-  text-decoration: none;
-  color: #000;
-  font-weight: 700;
-  font-size: xx-large;
-  margin: 0;
-  text-align: left;
-}
-
-.boton-menu:hover {
-  cursor: pointer;
-  opacity: 0.5;
 }
 
 .nav-enlaces {
@@ -58,16 +37,92 @@ body {
 }
 
 .item-de-barra {
-  color: #ccc;
+  color: #ddd;
   text-decoration: none;
   line-height: 40px;
   padding-left: 7px;
   padding-right: 7px;
+  margin: 2px 15px;
 }
 
 .item-de-barra:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.contenedor-btn-modo.item-de-barra:hover {
+  opacity: 1;
+}
+
+.desplazar-link-ancla { /* desplaza hacia abajo la dirección de las anclas del menu */
+  scroll-margin-top: 58px;
+}
+
+/*------ selector modo noche-dia ------*/
+
+.contenedor-btn-modo { 
+  cursor: pointer;
+  font-size: 0;
+  margin: 5px 10px 5px 0px;
+}
+
+.btn-modo {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border: 2px solid #555;
+  transition: background-color 0.5s;
+  box-shadow: -2px 2px #666;
+}
+
+.btn-modo i {
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.btn-modo.btn-dia {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 1px solid transparent;
+}
+
+.btn-modo.btn-noche {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.activo {
+  background-color: #333;
+  color:#ffcd5c !important;
+  box-shadow: none;
+  transition: box-shadow 1s;
+}
+
+/* --------------Botón del Menú para pantalla smaller --------*/
+/*     ver en @medias (al final de la hoja) más propiedades del mismo       */
+
+#menu-btn {
+  display: none;
+}
+
+.menu-hamburguesa {
+  color: #ddd;
+  display: none;
+  height: 20px;
+  font-size: 30px;
+  margin: 0px 0px 10px 10px;
+}
+
+.id-menu-icon { /*icono hamburguesa del menu*/
+  text-decoration: none;
+}
+
+.id-menu-icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.5s;
 }
 
 
@@ -86,7 +141,11 @@ body {
 #datospersonales {
   color: white;
   background-color: #722f37;
-  padding-top: 30px;
+  padding: 30px 5px 10px 10px;
+}
+
+.div-data-personal {
+  word-wrap: break-word;
 }
 
 .h3-data-personal {
@@ -95,6 +154,10 @@ body {
 
 .info-personal {
   font-size: larger;
+}
+
+.boton-invisible {
+  display:none;
 }
 
 .video-cv {
@@ -106,7 +169,7 @@ body {
   display: none;
 }
 
-.boton-cv { /*icono hamburguesa del menu*/
+.boton-cv { /*icono video youtube cv*/
   text-decoration: none;
   font-weight: 700;
   font-size: xx-large;
@@ -137,10 +200,6 @@ section div h2 {
   margin-left: 10px;
 }
 
-.datos-laborales {
-  background-color: #eaeff2;
-}
-
 .experiencia {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -153,14 +212,6 @@ section div h3 {
   margin-left: 5px;
   padding-bottom: 15px;
   padding-top: 20px;
-}
-
-.linea-separador-experiencia {
-  border-top: thin solid #402f3740;
-}
-
-.puesto-titulo {
-  border-left: thin solid #402f3740;
 }
 
 section div h4 {
@@ -185,34 +236,86 @@ section div p {
   border-top: medium solid #402f3770;
 }
 
+section {
+  color: inherit;
+  background-color: #eaeff2;
+}
+
+.linea-separador-experiencia {
+  border-top: thin solid #402f3740;
+}
+
+.puesto-titulo {
+  border-left: thin solid #402f3740;
+}
+
+
+/* PARA DARK MODE (solo cambia dentro de "section") */
+
+.noche {
+  color: #ffffffee;
+  background-color: #000;
+}
+
+.datos-laborales.noche.experiencia {
+  border-top: medium solid #999;
+}
+
+.datos-laborales.noche.linea-separador-experiencia {
+  border-top: thin solid #999;
+}
+
+.datos-laborales.noche.puesto-titulo {
+  border-left: thin solid #999; 
+}
+
+.datos-laborales.noche.sobre-mi {
+  border-top: medium solid #999;
+}
+
 
 /* FOOTER AUTOR */
 
 footer {
   color: #0003;
-  font-size: medium;
-  font-style: italic;
+  font-size: 20px;
+  font-family: monospace;
   text-shadow: 1px 1px #555;
   background-color: #999;
+  justify-content: center;
   text-align: center;
   width: 100%;
-  height: 50px;
-  padding: 10px;
+  height: 45px;
   border: thin solid #aaa;
 }
 
+#mailto-lautaro {
+  display: none;
+}
+
+.rrss-wsp-footer:hover {
+  cursor: pointer;
+}
+
+.rrss-tlgram-footer:hover {
+  cursor: pointer;
+}
 
 /*
  MEDIA
 */
 
 @media (max-width: 992px) { 
+  .barra-de-menu {
+    height: 40px;
+  }
+  
   .nav-enlaces {
     width: 50%;
-    margin-top: 50px;
+    margin-top: 35px;
+    margin-left: 0px;
     display: flex;
     flex-direction: column;
-    margin-left: 0;
     position: absolute;
       left: 0;
     visibility: collapse;
@@ -222,14 +325,42 @@ footer {
     background-color: #402f37;
     font-size: smaller;
     border-top: 1px solid #604f57;
-    width: 100%;    
+    width: 100%;
+    margin: 0px 5px 0px 5px;
+    box-shadow: -10px 10px #402f3780;
   }
 
   .menu-hamburguesa {
     display: inline;
   }
 
-  #menu-btn:checked ~ .nav-enlaces { /*ocultar o ver el menu*/
+  .nav-enlaces .visible { /*ocultar o ver el menu*/
     visibility: visible;
   }
+
+   /* Boton modo en medias */
+  .contenedor-btn-modo { 
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  
+  .btn-modo {
+    border: 2px solid #777;
+    transition: background-color 0.5s;
+  }
+   
+  .btn-modo.btn-dia {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 2px solid #777;
+  }
+  
+  .btn-modo.btn-noche {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
+
