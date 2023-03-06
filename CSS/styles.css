@@ -364,4 +364,26 @@ footer {
   }
 }
 
+@media (max-width: 400px) {
+  .datos-laborales {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .nombre-y-titulo {
+    padding-left: 0px;
+  }
+
+  .link-sin-decoracion span {
+    font-size: small;
+  }
+
+  #datospersonales h3 {
+    font-size: large;
+  }
+
+  .div-data-personal p {
+    font-size: medium;
+  }
+}
 
